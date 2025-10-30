@@ -1,0 +1,65 @@
+/* MomHelp AZ styles */
+:root {
+  --sage: #A5B5A2;
+  --charcoal: #4E564E;
+  --cream: #F8F6F3;
+  --white: #FFFFFF;
+  --black: #222222;
+}
+
+* { box-sizing: border-box; }
+html,body { margin:0; padding:0; background:#ffffff; color:var(--charcoal); }
+body { font-family: 'Inter', system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif; line-height:1.6; }
+
+.container { max-width: 1100px; margin: 0 auto; padding: 0 20px; }
+
+.site-header { position: sticky; top:0; background: #fff; border-bottom: 1px solid #eee; z-index:10; }
+.header-inner { display:flex; align-items:center; justify-content:space-between; padding:16px 0; }
+.brand .wordmark { font-family: 'Playfair Display', serif; font-weight:700; font-size:28px; color:var(--sage); letter-spacing:0.2px; }
+.brand .tm { font-size: 14px; vertical-align: super; margin-left:2px; color:var(--sage); }
+.brand .tagline { font-size:12px; color:var(--charcoal); margin-top:2px; }
+
+.nav a { margin-left:18px; text-decoration:none; color:var(--charcoal); font-weight:500; }
+.nav .button { background:var(--sage); color:#fff; padding:10px 14px; border-radius:10px; }
+.nav .button:hover { opacity:0.9; }
+
+.hero { padding:72px 0 56px; border-bottom:1px solid #eee; background:#fff; }
+.hero-inner { text-align:center; }
+.hero h1 { font-family:'Playfair Display', serif; font-size:44px; color:var(--black); margin:0 0 8px; }
+.hero p { font-size:18px; margin:0 0 20px; }
+.hero .serving { margin-top:8px; font-size:14px; color:#666; }
+.button.large { padding:14px 22px; border-radius:12px; display:inline-block; background:var(--sage); color:#fff; text-decoration:none; font-weight:600; }
+
+.section { padding:64px 0; }
+.section.alt { background: #fafafa; }
+.section h2 { font-size:30px; font-family:'Playfair Display', serif; margin:0 0 8px; }
+.section .lead { margin:0 0 28px; color:#555; }
+
+.grid { display:grid; grid-template-columns: repeat(3, 1fr); gap:18px; }
+.grid.three { grid-template-columns: repeat(3, 1fr); }
+
+.card { background:#fff; border:1px solid #eee; border-radius:14px; padding:20px; }
+.card h3 { margin-top:0; font-size:20px; color:var(--black); }
+.card.price .price-tag { font-size:24px; font-weight:700; color:var(--sage); margin:6px 0 10px; }
+.card.price ul { padding-left:18px; margin:0; }
+.card.price li { margin:6px 0; }
+.card.price.featured { border-color: var(--sage); box-shadow: 0 6px 24px rgba(0,0,0,0.06); }
+
+.steps { display:grid; grid-template-columns: repeat(3,1fr); gap:18px; }
+.step { background:#fff; border:1px solid #eee; border-radius:14px; padding:20px; }
+.step .num { width:32px; height:32px; border-radius:50%; background:var(--sage); color:#fff; display:flex; align-items:center; justify-content:center; font-weight:700; margin-bottom:8px; }
+
+details { background:#fff; border:1px solid #eee; border-radius:10px; padding:14px 16px; margin:10px 0; }
+summary { cursor:pointer; font-weight:600; }
+
+.contact { background:#fff; border-top:1px solid #eee; text-align:center; }
+.contact-inner p { margin-bottom:18px; }
+
+.site-footer { background:#fff; border-top:1px solid #eee; }
+.footer-inner { display:flex; justify-content:space-between; padding:20px 0; font-size:14px; color:#666; }
+
+@media (max-width: 900px) {
+  .grid, .grid.three, .steps { grid-template-columns: 1fr; }
+  .nav a { margin-left:12px; }
+  .hero h1 { font-size:36px; }
+}
