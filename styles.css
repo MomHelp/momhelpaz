@@ -1,5 +1,6 @@
 /* MomHelp™ Arizona Website Styles */
 /* --------------------------------- */
+
 /* Base Colors */
 :root {
   --white: #ffffff;
@@ -20,46 +21,43 @@ body {
   line-height: 1.6;
 }
 
-/* Header */
+/* Header + Navigation */
 header {
   background: var(--white);
   position: sticky;
   top: 0;
   z-index: 100;
-  padding: 10px 20px;
   box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
 }
 
-nav {
+.navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   max-width: 1100px;
-  margin: auto;
+  margin: 0 auto;
+  padding: 10px 20px;
 }
 
-.logo {
-  font-family: "Playfair Display", serif;
-  font-size: 1.4rem;
-  font-weight: 600;
-  color: var(--black);
+.nav-logo {
+  max-width: 130px;
+  height: auto;
+  display: block;
 }
 
-.menu {
-  list-style: none;
+.navbar nav {
   display: flex;
   gap: 20px;
-  margin: 0;
-  padding: 0;
 }
 
-.menu a {
+.navbar nav a {
   text-decoration: none;
   color: var(--soft-charcoal);
   font-weight: 500;
+  transition: color 0.3s ease;
 }
 
-.menu a:hover {
+.navbar nav a:hover {
   color: var(--light-denim);
 }
 
@@ -233,10 +231,16 @@ footer {
 
 /* Mobile Styles */
 @media (max-width: 768px) {
-  .menu {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .navbar nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 10px;
+    gap: 15px;
   }
 
   #hero h1 {
@@ -255,17 +259,4 @@ footer {
     padding: 10px 14px;
     font-size: 0.9rem;
   }
-}
-.site-header {
-  text-align: center;
-  margin-top: 15px;
-  margin-bottom: 15px;
-}
-
-.logo {
-  max-width: 120px;        /* further reduce max size */
-  width: auto;             /* try auto instead of 100% */
-  height: auto;
-  display: block;
-  margin: 15px auto 25px;  /* add bottom margin to separate from headline */
 }
