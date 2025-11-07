@@ -263,9 +263,9 @@ footer {
 }
 
 .logo {
-  max-width: 140px;
-  width: 100%;
+  max-width: 120px;        /* further reduce max size */
+  width: auto;             /* try auto instead of 100% */
   height: auto;
   display: block;
-  margin: 0 auto;
+  margin: 15px auto 25px;  /* add bottom margin to separate from headline */
 }
