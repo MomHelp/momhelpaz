@@ -1,3 +1,7 @@
 User-agent: *
 Allow: /
-Sitemap: https://momhelpaz.com/sitemap.xml
+
+Sitemap: https://samandafarkas.github.io/momhelpaz/sitemap.xml
+
+# Target audience: Arizona moms
+# Service areas: Gilbert, Chandler, Queen Creek, Mesa
